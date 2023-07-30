@@ -7,7 +7,7 @@
 
 <body>
 <h1>************COMMUNICATION CONTRACT************</h1>
-<h2>A. How does the microservice I implemented programmatically request data?</h2>
+<h2>A. How is data programmatically requested from my microservice?</h2>
 <p>The micro-service I designed uses sockets to request data. The microservice is running while the partner's project is running, then when the project has data that it needs processed (in this case a string that it wants to save to a text file), the project will send the string data to the port using the send function seen below
 
     def send(msg):
@@ -22,7 +22,7 @@
         # Action save request: Send the length to the microservice
         client.send(send_length)
         print(f"sending the message 1: {send_length}")
-        # Send the actual string to the miscrosevice 
+        # Send the actual string to the microservice 
         client.send(message)
         print(f"sending the message 2: {message}")
     
